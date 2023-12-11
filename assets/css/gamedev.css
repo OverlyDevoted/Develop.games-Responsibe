@@ -1,5 +1,4 @@
-body
-{
+body {
   background-color: black;
   margin-top: 0px;
   margin-right: 0px;
@@ -7,108 +6,92 @@ body
   margin-left: 0px
 }
 
-h1,h2,h3,h4
-{
+h1,
+h2,
+h3,
+h4 {
   color: white;
 }
 
-.button
-{ 
+.button {
   color: black;
   text-decoration: none;
 }
 
-a
-{
+a {
   color: orange;
 }
 
-a:hover
-{
+a:hover {
   color: purple;
 }
 
-.shell
-{
-  min-width: 1680px;
+.shell {
   width: 100%;
 }
 
-.grid
-{
+.grid {
   text-align: center;
-  float: center;
-  width: 100%;
 }
 
-.textbox
-{
+.shell>grid:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.textbox {
   color: #CCCCCC;
   text-align: justify;
   font-family: 'calibri', sans-serif;
   font-size: 22px;
   width: 40%;
-  margin: auto;
+  min-width: 400px;
+  margin: 0 auto;
   border-style: solid;
   border-color: #808080;
   border-width: 5px;
   border-radius: 5px;
   padding: 20px;
+  box-sizing: border-box;
 }
 
-.textbox img
-{
+.streambox {}
+
+.textbox img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
 }
 
-.textbox h1
-{
+.textbox h1,
+.textbox h2,
+.textbox h3,
+.textbox h4 {
   text-align: center;
 }
 
-.textbox h2
-{
-  text-align: center;
-}
-
-.textbox h3
-{
-  text-align: center;
-}
-
-.textbox h4
-{
-  text-align: center;
-}
-
-.seperator
-{
+.seperator {
   height: 1px;
   border-bottom: 3px solid #808080;
   width: 100%;
 }
 
-.text-seperator
-{
+.text-seperator {
   height: 1px;
   border-bottom: 2px solid #303030;
   width: 80%;
   margin: auto;
 }
 
-.header
-{
+.header {
   display: inline-block;
   width: 100%;
   height: 250px;
   text-align: center;
 }
 
-.title
-{
+.title {
   height: 200px;
   width: 1200px;
   margin: 0 auto;
@@ -117,14 +100,12 @@ a:hover
   display: flex;
 }
 
-.title .container
-{
+.title .container {
   width: 100%;
   margin-top: -30px;
 }
 
-.title .container a
-{
+.title .container a {
   padding: 40px;
 }
 
@@ -136,76 +117,112 @@ a:hover
 /* Setup Version*/
 
 /* Setup NavBar */
-.nav-section
-{
+.nav-section {
   font-family: 'calibri', sans-serif;
   font-size: 18px;
   position: sticky;
   align-self: start;
   font-weight: 300;
   color: #333;
-  top: 2rem;
+  top: 0;
   grid-column: 1 / -1;
   grid-row: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
-.nav-section a 
-{
+.nav-section button {
+
+  pointer-events: auto;
+}
+
+.nav-section a {
   transition: all 50ms ease-in-out;
   text-decoration: none;
   padding: .125rem 0;
   display: block;
   color: #CCC;
-  width: 20%;
-  pointer-events: auto; 
+  pointer-events: auto;
 }
 
 .nav-section a:hover,
-.nav-section a:focus 
-{
+.nav-section a:focus {
   color: #666;
 }
 
-ul, ol 
-{
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;
   color: #888;
 }
 
-ul
-{
+ul,
+li {
+  max-width: 200px;
+}
+
+ul {
   margin-left: 3rem;
 }
 
-li 
-{
+li {
   margin-left: 2rem;
 }
 
 /* Setup Grid */
-grid 
-{
+grid {
   display: grid;
   grid-template-columns: 1fr 100%;
 }
 
 /* Fix content to not be in the column with the NavBar */
-.nav-content
-{
-	grid-column: 2;
-	grid-row: 1;
+.nav-content {
+  grid-column: 2;
+  grid-row: 1;
 }
 
 /* Make scrolling smooth */
-html 
-{
+html {
   scroll-behavior: smooth;
 }
 
+/* 
+} */
+button {
+background-color: white;
+border: none;
+border-top-right-radius: .2em;
+border-bottom-right-radius: .2em;
+}
+button:hover {
+  filter: invert(100%);
+}
+#nav {
+  overflow-y: scroll;
+}
+#nav.active {
+  opacity: 1;
+  background-color: black;
+  transition-duration: 300ms;
+  translate: 0%;
+}
+
+@media screen and (max-width:850px) {
+  .nav-section ol {
+    opacity: 0;
+    translate: -50%;
+    transition-duration: 300ms;
+  }
+}
+
+@media screen and (min-width:851px) {
+  #nav.active {
+    background-color: transparent;
+    translate: 0%;
+  }
+}
