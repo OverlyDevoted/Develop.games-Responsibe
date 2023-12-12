@@ -10,42 +10,51 @@
 	<meta name="twitter:title" content="So you want to make games?" />
 	<meta name="twitter:description" content="Stay a while and listen." />
 	<meta name="twitter:image" content="https://piratesoftware.live/assets/images/category_splash.png" />
-	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui">
+	<!-- Load the Twitch embed script -->
+	<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+
 </head>
 
 <div class="shell">
-	<grid>
+	<section>
 		<div style="margin-left: 2rem; top: 0.5rem; position: relative; 
 		font-family: 'calibri', sans-serif;">
-			<h4>v1.0.8</h4>
+			<h4>v1.0.8.k3yman</h4>
 		</div>
-		<!-- <div class="nav-content">
+		<div class="nav-content">
 			<div class="header" id="nav-header">
 				<div class="title">
-					<div class="container">				
+					<div class="container">
 						<a class="button" href="/">
-							<img src="/assets/images/button_gamedev_white.gif" alt="Game Development" onmouseover="this.src='/assets/images/button_gamedev_yellow.gif';" onmouseout="this.src='/assets/images/button_gamedev_white.gif';" height="100">
+							<img src="/assets/images/button_gamedev_white.gif" alt="Game Development"
+								onmouseover="this.src='/assets/images/button_gamedev_yellow.gif';"
+								onmouseout="this.src='/assets/images/button_gamedev_white.gif';" height="100">
 						</a>
-						
+
 						<a class="button" href="/streaming" alt="Streaming">
-							<img src="/assets/images/button_streaming_white.gif" alt="Streaming" onmouseover="this.src='/assets/images/button_streaming_yellow.gif';" onmouseout="this.src='/assets/images/button_streaming_white.gif';" height="100">
+							<img src="/assets/images/button_streaming_white.gif" alt="Streaming"
+								onmouseover="this.src='/assets/images/button_streaming_yellow.gif';"
+								onmouseout="this.src='/assets/images/button_streaming_white.gif';" height="100">
 						</a>
-						
+
 						<a class="button" href="/gamejam" alt="GameJam">
-							<img src="/assets/images/button_gamejam_white.gif" alt="Streaming" onmouseover="this.src='/assets/images/button_gamejam_yellow.gif';" onmouseout="this.src='/assets/images/button_gamejam_white.gif';" height="100">
+							<img src="/assets/images/button_gamejam_white.gif" alt="Streaming"
+								onmouseover="this.src='/assets/images/button_gamejam_yellow.gif';"
+								onmouseout="this.src='/assets/images/button_gamejam_white.gif';" height="100">
 						</a>
 					</div>
 				</div>
 			</div>
-		</div> -->
-	</grid>
+		</div>
+	</section>
 
 	<div class="seperator"></div>
-	<br><br>
 
-	<grid>
-		<div class="nav-section">
-			<button onclick="document.getElementById('nav').classList.toggle('active')"><img src="assets/images/menu.svg" alt=""></button>
+
+	<section id="nav-section">
+		<div id="nav-container">
 			<ol id="nav">
 				<li><a href="#nav-header">Site Navigation</a></li>
 
@@ -88,16 +97,22 @@
 				<ul><a href="#nav-launch-jolt">Game Jolt</a></ul>
 				<ul><a href="#nav-launch-itch">Itch.io</a></ul>
 			</ol>
+			<div>
+				<button onclick="document.getElementById('nav-section').classList.toggle('active')"
+					ontouchstart="this.style='filter:invert(100%)'" ontouchend="this.style='filter:invert(0%)'"><img
+						src="assets/images/menu.svg" alt=""></button>
+			</div>
 		</div>
 
 		<div class="nav-content">
 			<div id="nav-stream"></div>
 			<br><br>
-			<div class="textbox streambox">
+			<div class="textbox stream">
 				<h2>Live Twitch DevStream</h2>
-				<iframe src="https://www.piratesoftware.live/embed/" width="100%" scrolling="no"
-					style="border:none; overflow:hidden; width: 100%;"></iframe>
-				<br>
+				<div class="streambox">
+					<div id="twitch-embed"></div>
+					<br>
+				</div>
 			</div>
 
 			<br><br><br>
@@ -476,7 +491,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/flstudio_splash.png">
+				<img src="/assets/images/flstudio_splash.jpg">
 				<br><br>
 				<a href="https://www.image-line.com/fl-studio">FL Studio</a> is by far the gold standard for audio
 				tools. All of our music and sound effects were made in it. It's incredibly easy to use, insanely
@@ -871,7 +886,7 @@
 				<br>
 				<div id="nav-launch-humble"></div>
 				<br>
-				<img src="/assets/images/humble_splash.png">
+				<img src="/assets/images/humble_splash.webp">
 				<br><br>
 				<a href="https://www.humblebundle.com/">Humble Bundle</a> is a great middle-man platform that can help
 				improve your sales by distributing Steam keys. They don't take any amount from your sale unless you
@@ -908,12 +923,23 @@
 				<br><br>
 			</div>
 		</div>
-	</grid>
+	</section>
 	<br><br><br>
 	<br><br><br>
+	<!-- Create a Twitch.Player object. This will render within the placeholder div -->
+	<script type="text/javascript">
+		new Twitch.Player("twitch-embed", {
+			channel: "piratesoftware",
+			parent: ["localhost"]
+		});
+	</script>
 	<script>
-		const toggleNav = () => {
-			console.log("heko")
+		const as = document.getElementById("nav").getElementsByTagName("a")
+		for(i =0;i<as.length;i++)
+		{
+			as[i].addEventListener("click", ()=>{
+				document.getElementById("nav-section").classList.toggle("active");
+			})
 		}
 	</script>
 </div>

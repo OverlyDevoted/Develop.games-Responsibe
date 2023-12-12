@@ -1,3 +1,18 @@
+:root {
+  --button-dim: 36px;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: purple;
+  background: orange;
+}
+
+::selection {
+  color: purple;
+  background: orange;
+}
+
 body {
   background-color: black;
   margin-top: 0px;
@@ -21,7 +36,6 @@ h4 {
 a {
   color: orange;
 }
-
 a:hover {
   color: purple;
 }
@@ -34,7 +48,12 @@ a:hover {
   text-align: center;
 }
 
-.shell>grid:first-child {
+.shell>section:last-of-type {
+  margin-top: 50px;
+}
+
+.shell>section:first-child {
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -45,17 +64,37 @@ a:hover {
   font-family: 'calibri', sans-serif;
   font-size: 22px;
   width: 40%;
-  min-width: 400px;
-  margin: 0 auto;
+  min-width: 365px;
   border-style: solid;
   border-color: #808080;
   border-width: 5px;
   border-radius: 5px;
+
+
   padding: 20px;
   box-sizing: border-box;
 }
 
-.streambox {}
+.textbox.stream {
+
+  padding: 20px 20px 50px;
+  max-width: 1200px;
+  border-style: none;
+  width:50%
+}
+
+.streambox {
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.streambox iframe {
+  position: absolute;
+  height: 100%;
+  min-width: 400px;
+  min-height: 300px;
+  top: 0;
+}
 
 .textbox img {
   display: block;
@@ -87,27 +126,21 @@ a:hover {
 .header {
   display: inline-block;
   width: 100%;
-  height: 250px;
   text-align: center;
 }
 
 .title {
-  height: 200px;
-  width: 1200px;
-  margin: 0 auto;
-  margin-top: 50px;
-  align-items: center;
-  display: flex;
+  margin: 50px auto;
 }
 
 .title .container {
   width: 100%;
-  margin-top: -30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.title .container a {
-  padding: 40px;
-}
 
 
 /* -------------------------------------------------------------------------- */
@@ -117,7 +150,15 @@ a:hover {
 /* Setup Version*/
 
 /* Setup NavBar */
-.nav-section {
+#nav {
+  overflow-y: auto;
+  background-color: black;
+}
+
+#nav-container {
+  max-height: 100dvh;
+  width: fit-content;
+  padding-bottom: 2em;
   font-family: 'calibri', sans-serif;
   font-size: 18px;
   position: sticky;
@@ -127,19 +168,15 @@ a:hover {
   top: 0;
   grid-column: 1 / -1;
   grid-row: 1;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  pointer-events: none;
+  display: flex;
+  z-index: 2;
 }
 
-.nav-section button {
-
-  pointer-events: auto;
+#nav-container button {
+  align-self: baseline;
 }
 
-.nav-section a {
+#nav-container a {
   transition: all 50ms ease-in-out;
   text-decoration: none;
   padding: .125rem 0;
@@ -148,8 +185,8 @@ a:hover {
   pointer-events: auto;
 }
 
-.nav-section a:hover,
-.nav-section a:focus {
+#nav-container a:hover,
+#nav-container a:focus {
   color: #666;
 }
 
@@ -175,7 +212,7 @@ li {
 }
 
 /* Setup Grid */
-grid {
+section {
   display: grid;
   grid-template-columns: 1fr 100%;
 }
@@ -184,8 +221,11 @@ grid {
 .nav-content {
   grid-column: 2;
   grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
-
 /* Make scrolling smooth */
 html {
   scroll-behavior: smooth;
@@ -194,35 +234,68 @@ html {
 /* 
 } */
 button {
-background-color: white;
-border: none;
-border-top-right-radius: .2em;
-border-bottom-right-radius: .2em;
+  background-color: white;
+  border: none;
+  border-top-right-radius: .2em;
+  border-bottom-right-radius: .2em;
+  padding: 0;
 }
+
+button img {
+  height: var(--button-dim);
+  display: inline-block;
+  vertical-align: middle;
+}
+
 button:hover {
-  filter: invert(100%);
-}
-#nav {
-  overflow-y: scroll;
-}
-#nav.active {
-  opacity: 1;
-  background-color: black;
-  transition-duration: 300ms;
-  translate: 0%;
+  filter: invert()
 }
 
-@media screen and (max-width:850px) {
-  .nav-section ol {
-    opacity: 0;
-    translate: -50%;
-    transition-duration: 300ms;
+#nav-section.active {
+  justify-content: end;
+}
+#nav-section.active #nav-container {
+  translate: 0;
+  transition: 300ms;
+}
+
+#nav-container {
+  translate: calc(-100% + var(--button-dim));
+  transition: 300ms;
+}
+
+@media screen and (min-width:850px) {
+  #nav-container button {
+    display: none;
+
+  }
+
+  .streambox iframe {
+
+    width: 100%;
+  }
+
+  #nav-container {
+    translate: 0;
+  }
+
+  .textbox.stream {
+    border-style: solid;
+    border-color: #808080;
+    border-width: 5px;
+    border-radius: 5px;
+    min-width: 400px;
+    box-sizing: content-box;
+  }
+
+  .title .container {
+    flex-direction: row;
   }
 }
 
-@media screen and (min-width:851px) {
-  #nav.active {
-    background-color: transparent;
-    translate: 0%;
-  }
+#twitch-embed {
+  display: flex;
+  justify-content: center;
 }
+
+@media screen and (max-width:600px) {}
