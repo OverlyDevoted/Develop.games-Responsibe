@@ -8,12 +8,43 @@ First, I downloaded all the HTML and CSS code, then and all the pictures. I star
 ![Initial mobile view](/assets/readme/initial_mobile.jpg)
 
 ## HTML and CSS
-After getting an idea of website's responsiveness from user standpoint, I proceeded to examine the website's code. I noticed that it contains very minimal JS, most of JS in use was from Twitch embed and some CloudFare scripts. I found that `<br>` was the main element for spacing elements. Also there was the of use non-existent tag `grid`.      
+After getting an idea of website's responsiveness from user standpoint, I proceeded to examine the website's code. I noticed that it contains very minimal JS, most of JS in use was from Twitch embed and some CloudFare scripts. I found that `<br>` was the main element for spacing elements. Also there was the of use non-existent tag `grid`. 
 
 ## Google PageSpeed Insights
 
+PageSpeed identified these main issues:
+### Performance
+1. Images are too large (8.82s)
+2. Some images are too large in size (8.05s)
+3. There's unused Javascript that takes too long (6.88s)
 
+### Accessibility
+1. Image `alt` and HTML `lang` tags 
+
+### Best practices
+1. Issues from this category stemmed all from twitch stream so I ignored it
+
+### SEO
+1. And some missing meta headers.
+
+## Goals
+
+With this information I set out to make the website more responsive while fixing PageSpeed insight issues along the way. These are the goals I set for myself:
+1. Make the main content of the website always in the middle and scale with screen size
+2. On smaller screens make toggle with a button
+3. Reduce image size and 
+4. Make hyperlinks open on a new tab
+5. Use as little JS as possible
+6. Refactor CSS and HTML to reduce size and increase readability
+
+## Results
 - Navbar is now expandable as a sidebar on certain screen sizes.
-- [ ] Hyperlinks now open a new tab instead of opening a new page on the same tab. 
-- [ ] Utilize syntatic HTML for improved accessibility 
-- [ ] Optimize images 
+- Hyperlinks now open a new tab instead of opening a new page on the same tab. 
+- Utilize syntatic HTML for improved accessibility 
+- Labeled all images
+- Reduced image size by about 46.6%. (Funny that scam_splash size got reduced by 94%) 
+
+### Desktop
+![Desktop Final](/assets/readme/developGames.gif)
+### Mobile
+![Mobile Final](/assets/readme/mobile.gif)

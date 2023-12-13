@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<title>Game Development</title>
-	<link href="/assets/css/gamedev.css" rel="stylesheet" />
-
+	<meta name="description" content="Learn how to kick of your game development hobby today.">
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@PirateSoftware" />
 	<meta name="twitter:title" content="So you want to make games?" />
 	<meta name="twitter:description" content="Stay a while and listen." />
-	<meta name="twitter:image" content="https://piratesoftware.live/assets/images/category_splash.png" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui">
+	<meta name="twitter:image" content="https://piratesoftware.live/assets/images/category_splash.webp" />
+	
+	<link href="/assets/css/gamedev.css" rel="stylesheet" />
 	<!-- Load the Twitch embed script -->
 	<script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
@@ -27,22 +30,22 @@
 			<div class="header" id="nav-header">
 				<div class="title">
 					<div class="container">
-						<a class="button" href="/">
-							<img src="/assets/images/button_gamedev_white.gif" alt="Game Development"
-								onmouseover="this.src='/assets/images/button_gamedev_yellow.gif';"
-								onmouseout="this.src='/assets/images/button_gamedev_white.gif';" height="100">
+						<a href="/">
+							<img src="/assets/images/button_gamedev_white.webp" alt="Game Development"
+								onmouseover="this.src='/assets/images/button_gamedev_yellow.webp';"
+								onmouseout="this.src='/assets/images/button_gamedev_white.webp';" height="100">
 						</a>
 
-						<a class="button" href="/streaming" alt="Streaming">
-							<img src="/assets/images/button_streaming_white.gif" alt="Streaming"
-								onmouseover="this.src='/assets/images/button_streaming_yellow.gif';"
-								onmouseout="this.src='/assets/images/button_streaming_white.gif';" height="100">
+						<a href="/streaming" alt="Streaming">
+							<img src="/assets/images/button_streaming_white.webp" alt="Streaming"
+								onmouseover="this.src='/assets/images/button_streaming_yellow.webp';"
+								onmouseout="this.src='/assets/images/button_streaming_white.webp';" height="100">
 						</a>
 
-						<a class="button" href="/gamejam" alt="GameJam">
-							<img src="/assets/images/button_gamejam_white.gif" alt="Streaming"
-								onmouseover="this.src='/assets/images/button_gamejam_yellow.gif';"
-								onmouseout="this.src='/assets/images/button_gamejam_white.gif';" height="100">
+						<a href="/gamejam" alt="GameJam">
+							<img src="/assets/images/button_gamejam_white.webp" alt="Streaming"
+								onmouseover="this.src='/assets/images/button_gamejam_yellow.webp';"
+								onmouseout="this.src='/assets/images/button_gamejam_white.webp';" height="100">
 						</a>
 					</div>
 				</div>
@@ -55,50 +58,59 @@
 
 	<section id="nav-section">
 		<div id="nav-container">
-			<ol id="nav">
+			<ul id="nav">
 				<li><a href="#nav-header">Site Navigation</a></li>
 
 				<li><a href="#nav-stream">Live Stream</a></li>
 
 				<li><a href="#nav-game">Who are you?</a></li>
 
-				<li><a href="#nav-skills">Skills Required</a></li>
-				<ul><a href="#nav-skills-art">Art</a></ul>
-				<ul><a href="#nav-skills-music">Music</a></ul>
-				<ul><a href="#nav-skills-programming">Programming</a></ul>
+				<ul>
+					<a href="#nav-skills">Skills Required</a>
+					<li><a href="#nav-skills-art">Art</a></li>
+					<li><a href="#nav-skills-music">Music</a></li>
+					<li><a href="#nav-skills-programming">Programming</a></li>
+				</ul>
 
 				<li><a href="#nav-type">Picking a Genre</a></li>
 
 				<li><a href="#nav-team">Building a Team</a></li>
 
-				<li><a href="#nav-tools">Tools</a></li>
-				<ul><a href="#nav-tools-engine">Engines</a></ul>
-				<ul><a href="#nav-tools-art">Art Programs</a></ul>
-				<ul><a href="#nav-tools-audio">Audio Programs</a></ul>
+				<ul>
+					<a href="#nav-tools">Tools</a>
+					<li><a href="#nav-tools-engine">Engines</a></li>
+					<li><a href="#nav-tools-art">Art Programs</a></li>
+					<li><a href="#nav-tools-audio">Audio Programs</a></li>
+				</ul>
 
-				<li><a href="#nav-finance">Financing</a></li>
-				<ul><a href="#nav-finance-stream">Streaming</a></ul>
-				<ul><a href="#nav-finance-publishers">Publishers</a></ul>
-				<ul><a href="#nav-finance-kick">Kickstarter</a></ul>
-				<ul><a href="#nav-finance-merch">Merchandise</a></ul>
-				<ul><a href="#nav-finance-subscription">Subscription Services</a></ul>
-				<ul><a href="#nav-finance-scams">Scams</a></ul>
+				<ul>
+					<a href="#nav-finance">Financing</a>
+					<li><a href="#nav-finance-stream">Streaming</a></li>
+					<li><a href="#nav-finance-publishers">Publishers</a></li>
+					<li><a href="#nav-finance-kick">Kickstarter</a></li>
+					<li><a href="#nav-finance-merch">Merchandise</a></li>
+					<li><a href="#nav-finance-subscription">Subscription Services</a></li>
+					<li><a href="#nav-finance-scams">Scams</a></li>
+				</ul>
 
-				<li><a href="#nav-marketing">Marketing</a></li>
-				<ul><a href="#nav-marketing-community">Building a Community</a></ul>
-				<ul><a href="#nav-marketing-socialmedia">Social Media</a></ul>
-				<ul><a href="#nav-marketing-advertising">Paid Advertisement</a></ul>
-				<ul><a href="#nav-marketing-conventions">Conventions</a></ul>
-				<ul><a href="#nav-marketing-awards">Awards</a></ul>
+				<ul>
+					<a href="#nav-marketing">Marketing</a>
+					<li><a href="#nav-marketing-community">Building a Community</a></li>
+					<li><a href="#nav-marketing-socialmedia">Social Media</a></li>
+					<li><a href="#nav-marketing-advertising">Paid Advertisement</a></li>
+					<li><a href="#nav-marketing-conventions">Conventions</a></li>
+					<li><a href="#nav-marketing-awards">Awards</a></li>
+				</ul>
 
-				<li><a href="#nav-launch">Launching Your Game</a></li>
-				<ul><a href="#nav-launch-steam">Steam</a></ul>
-				<ul><a href="#nav-launch-humble">Humble Bundle</a></ul>
-				<ul><a href="#nav-launch-jolt">Game Jolt</a></ul>
-				<ul><a href="#nav-launch-itch">Itch.io</a></ul>
-			</ol>
+				<ul><a href="#nav-launch">Launching Your Game</a>
+					<li><a href="#nav-launch-steam">Steam</a></li>
+					<li><a href="#nav-launch-humble">Humble Bundle</a></li>
+					<li><a href="#nav-launch-jolt">Game Jolt</a></li>
+					<li><a href="#nav-launch-itch">Itch.io</a></li>
+				</ul>
+			</ul>
 			<div>
-				<button onclick="document.getElementById('nav-section').classList.toggle('active')"
+				<button title="Sidebar Button" onclick="document.getElementById('nav-section').classList.toggle('active')"
 					ontouchstart="this.style='filter:invert(100%)'" ontouchend="this.style='filter:invert(0%)'"><img
 						src="assets/images/menu.svg" alt=""></button>
 			</div>
@@ -119,7 +131,7 @@
 			<div id="nav-game"></div>
 			<br><br>
 			<div class="textbox">
-				<img src="/assets/images/gamedev_splash.png" style="width: 100%">
+				<img src="/assets/images/gamedev_splash.webp" alt="GameDev Splash" style="width: 100%">
 				<br>
 				<h1>Who are you?</h1>
 				<div class="text-seperator"></div>
@@ -157,7 +169,7 @@
 			<div id="nav-skills"></div>
 			<br><br>
 			<div class="textbox">
-				<img src="/assets/images/gamedev_splash.png" style="width: 100%">
+				<img src="/assets/images/gamedev_splash.webp" alt="GameDev Splash" style="width: 100%">
 				<br>
 				<h1>What skills do I need?</h1>
 				<div class="text-seperator"></div>
@@ -175,7 +187,7 @@
 				<br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/thomas_splash.jpg">
+				<img src="/assets/images/thomas_splash.webp" alt="thomas was alone">
 				<br><br>
 				<a href="https://store.steampowered.com/app/220780/Thomas_Was_Alone/">Thomas Was Alone</a> is made of
 				rectangles. All of it. Even the particles. It will also make you cry. Thomas Was Alone is a masterclass
@@ -185,7 +197,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/suits_splash.jpg">
+				<img src="/assets/images/suits_splash.webp" alt="Suits. A Business RPG">
 				<br><br>
 				<a href="https://store.steampowered.com/app/410670/Suits_A_Business_RPG/">Suits A Business RPG</a> was
 				made with incredibly simplistic pixel art and drawn pencil images that are scanned into a computer. It's
@@ -194,7 +206,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/loathing_splash.jpg">
+				<img src="/assets/images/loathing_splash.webp" alt="West of Loathing">
 				<br><br>
 				<a href="https://store.steampowered.com/app/597220/West_of_Loathing/">West of Loathing</a> is the
 				glorious successor to Kingdom of Loathing. It's also entirely stick figures and insane humor. The
@@ -203,7 +215,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/nepenthe_splash.jpg">
+				<img src="/assets/images/nepenthe_splash.webp" alt="Nepenthe">
 				<br><br>
 				<a href="https://store.steampowered.com/app/789570/Nepenthe/">Nepenthe</a> takes a similar route as
 				Suits A Business RPG. It was made entirely in colored pencil, scanned into a computer, and used as tiles
@@ -218,7 +230,7 @@
 				<br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/hidden_splash.jpg">
+				<img src="/assets/images/hidden_splash.webp" alt="Hidden Folks">
 				<br><br>
 				<a href="https://store.steampowered.com/app/435400/Hidden_Folks/">Hidden Folks</a> is effectively an
 				evolution on Where's Waldo and while it's simple in concept it's super well executed. The wild thing
@@ -234,7 +246,7 @@
 				<br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/undertale_splash.jpg">
+				<img src="/assets/images/undertale_splash.webp" alt="Undertale">
 				<br><br>
 				Yes, that's right. <a href="https://store.steampowered.com/app/391540/Undertale/">Undertale</a> is a
 				damn incredible game. It has a unique combat style, great story, the puzzles are ok, and the dad jokes
@@ -248,7 +260,7 @@
 			<div id="nav-type"></div>
 			<br><br>
 			<div class="textbox">
-				<img src="/assets/images/gamedev_splash.png" style="width: 100%">
+				<img src="/assets/images/gamedev_splash.webp" alt="GameDev Splash" style="width: 100%">
 				<br>
 				<h1>What kind of game should I make?</h1>
 				<div class="text-seperator"></div>
@@ -295,7 +307,7 @@
 			<div id="nav-team"></div>
 			<br><br>
 			<div class="textbox">
-				<img src="/assets/images/gamedev_splash.png" style="width: 100%">
+				<img src="/assets/images/gamedev_splash.webp" alt="GameDev Splash" style="width: 100%">
 				<br>
 				<h1>How do I build a team?</h1>
 				<div class="text-seperator"></div>
@@ -325,7 +337,7 @@
 			<div id="nav-tools"></div>
 			<br><br>
 			<div class="textbox">
-				<img src="/assets/images/gamedev_splash.png" style="width: 100%">
+				<img src="/assets/images/gamedev_splash.webp" alt="GameDev Splash" style="width: 100%">
 				<br>
 				<h1>Tools</h1>
 				<div class="text-seperator"></div>
@@ -365,7 +377,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/godot_splash.png">
+				<img src="/assets/images/godot_splash.webp" alt="Godot">
 				<br><br>
 				<a href="https://godotengine.org">Godot</a> is a beast. Completely built by its community, fully open
 				source, and entirely free. It excels in 3d is great for 2d and is now being used by major studios. You
@@ -377,7 +389,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/gamemaker_splash.png">
+				<img src="/assets/images/gamemaker_splash.webp" alt="GameMaker">
 				<br><br>
 				<a href="https://www.yoyogames.com/en/gamemaker">GameMaker</a> is a great engine for making 2d games but
 				not very strong with 3d. You can use the free trial indefinitely for non-commercial use and it allows
@@ -394,7 +406,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/unreal_splash.jpg">
+				<img src="/assets/images/unreal_splash.webp" alt="Unreal Engine">
 				<br><br>
 				<a href="https://www.unrealengine.com/en-US/download">Unreal Engine</a> is a powerhouse in the 3d arena
 				that has a great monetization model. If your game makes under 1,000,000$ over its lifetime you pay them
@@ -407,7 +419,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/renpy_splash.png" style="width: 25%;">
+				<img src="/assets/images/renpy_splash.webp" alt="RenPy" style="width: 25%;">
 				<br><br>
 				<a href="https://www.renpy.org/">Ren'Py</a> is a fantastic engine specifically made for Visual Novels.
 				It's completely free, easy to use, and has a great community around it. Definitely able to make some
@@ -431,7 +443,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/aseprite_splash.png">
+				<img src="/assets/images/aseprite_splash.webp" alt="Aseprite">
 				<br><br>
 				<a href="https://www.aseprite.org/">Aseprite</a> is the actual god of pixel art tools. Running at a
 				cheap 20$ this powerhouse is super affordable but also carries an extra bonus. You can get it for free.
@@ -440,7 +452,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/gimp_splash.png" style="width: 40%;">
+				<img src="/assets/images/gimp_splash.webp" alt="Gimp" style="width: 40%;">
 				<br><br>
 				<a href="https://www.gimp.org/">Gimp</a> is an incredibly fantastic image editing tool generally looked
 				down on for being the ugly brother of photoshop. That being said it has a few super powers that
@@ -450,7 +462,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/blender_splash.png">
+				<img src="/assets/images/blender_splash.webp" alt="Blender">
 				<br><br>
 				<a href="https://www.blender.org/">Blender</a> is a really powerful and entirely free 3d modeling and
 				animation tool. It can do some absolutely insane stuff and as it continues to evolve it has met or
@@ -472,7 +484,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/famistudio_splash.jpg">
+				<img src="/assets/images/famistudio_splash.webp" alt="FamiStudio">
 				<br><br>
 				<a href="https://famistudio.org/">FamiStudio</a> is an awesome free tool for making NES style chiptunes
 				and sound effects. There is a pretty massive fan community built around it and a ton of easy to follow
@@ -483,7 +495,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/anvil_splash.png">
+				<img src="/assets/images/anvil_splash.webp" alt="Anvil Studio">
 				<br><br>
 				<a href="https://www.anvilstudio.com/">Anvil Studio</a> is a completely free MIDI audio design platform.
 				If you're just starting out or really want a nice oldschool feel to your audio I really recommend
@@ -491,7 +503,7 @@
 				<br><br><br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/flstudio_splash.jpg">
+				<img src="/assets/images/flstudio_splash.webp" alt="FL Studio">
 				<br><br>
 				<a href="https://www.image-line.com/fl-studio">FL Studio</a> is by far the gold standard for audio
 				tools. All of our music and sound effects were made in it. It's incredibly easy to use, insanely
@@ -504,7 +516,7 @@
 			<div id="nav-finance"></div>
 			<br><br>
 			<div class="textbox">
-				<img src="/assets/images/gamedev_splash.png" style="width: 100%">
+				<img src="/assets/images/gamedev_splash.webp" alt="GameDev Splash" style="width: 100%">
 				<br>
 				<h1>How do I raise money?</h1>
 				<div class="text-seperator"></div>
@@ -537,7 +549,7 @@
 				<br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/twitch_splash.jpg">
+				<img src="/assets/images/twitch_splash.webp" alt="Twitch">
 				<br><br>
 				<a href="https://piratesoftware.live">Twitch</a> has been the cornerstone of our studios income
 				throughout everything we've done. It serves as a great way to interact with the community, a source of
@@ -561,7 +573,7 @@
 				<br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/publisher_splash.jpg">
+				<img src="/assets/images/publisher_splash.webp" alt="Publisher">
 				<br><br>
 				Any time you are thinking about going with a publisher just keep one question in mind. Will their help
 				lead to profits above and beyond the revenue cut they take? If you don't know the answer or if the
@@ -581,7 +593,7 @@
 				<br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/kick_splash.jpg">
+				<img src="/assets/images/kick_splash.webp" alt="KickStarter">
 				<br><br>
 				<a href="https://www.kickstarter.com/projects/piratesoftware/heartbound">Kickstarter</a> is a great
 				place to raise funding when you've already got a community base and a workable demo. I definitely
@@ -599,7 +611,7 @@
 				<br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/merch_splash.jpg">
+				<img src="/assets/images/merch_splash.webp" alt="Merch">
 				<br><br>
 				<a href="https://piratesoftware.bigcartel.com/products">Merchandise</a> has been a lot of fun to create
 				and distribute around the world. With changing shipping rates and material costs things have been pretty
@@ -622,7 +634,7 @@
 				<br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/kofi_splash.png">
+				<img src="/assets/images/kofi_splash.webp" alt="Ko-Fi">
 				<br><br>
 				<a href="https://ko-fi.com/piratesoftware/tiers">Ko-Fi</a> is like Patreon if Patreon wasn't the actual
 				devil. Unlike the actual devil, Ko-Fi charges a flat fee for their subscription service. Right now it's
@@ -642,7 +654,7 @@
 				<br>
 				<div class="text-seperator"></div>
 				<br><br>
-				<img src="/assets/images/scam_splash.png" style="width: 25%">
+				<img src="/assets/images/scam_splash.webp" alt="Stream-master" style="width: 25%">
 				<br><br>
 				Scams are a super prevalent pitfall in the world of the indie dev. Do not sign anything you haven't
 				read. If you're unsure of what something means in a contract then talk to a lawyer. If you do
@@ -707,7 +719,7 @@
 			<div id="nav-marketing"></div>
 			<br><br>
 			<div class="textbox">
-				<img src="/assets/images/gamedev_splash.png" style="width: 100%">
+				<img src="/assets/images/gamedev_splash.webp" alt="GameDev Splash" style="width: 100%">
 				<h1>Marketing</h1>
 				<div class="text-seperator"></div>
 				<br>
@@ -841,7 +853,7 @@
 			<div id="nav-launch"></div>
 			<br><br>
 			<div class="textbox">
-				<img src="/assets/images/gamedev_splash.png" style="width: 100%">
+				<img src="/assets/images/gamedev_splash.webp" alt="GameDev Splash" style="width: 100%">
 				<br>
 				<h1>Where should I launch my game?</h1>
 				<div class="text-seperator"></div>
@@ -855,7 +867,7 @@
 				<br>
 				<div id="nav-launch-steam"></div>
 				<br>
-				<img src="/assets/images/steam_splash.jpg">
+				<img src="/assets/images/steam_splash.webp" alt="Steam">
 				<br><br>
 				<a href="https://store.steampowered.com/">Steam</a> is the best monetization platform that exists for
 				games. With a massive frontend geared towards player interaction and feedback, a robust backend to help
@@ -886,7 +898,7 @@
 				<br>
 				<div id="nav-launch-humble"></div>
 				<br>
-				<img src="/assets/images/humble_splash.webp">
+				<img src="/assets/images/humble_splash.webp" alt="Humble Bundle">
 				<br><br>
 				<a href="https://www.humblebundle.com/">Humble Bundle</a> is a great middle-man platform that can help
 				improve your sales by distributing Steam keys. They don't take any amount from your sale unless you
@@ -898,7 +910,7 @@
 				<br>
 				<div id="nav-launch-jolt"></div>
 				<br>
-				<img src="/assets/images/gamejolt_splash.jpg">
+				<img src="/assets/images/gamejolt_splash.webp" alt="GameJolt">
 				<br><br>
 				<a href="https://gamejolt.com/games/heartbound/275495">Game Jolt</a> is the god of demo sites. Make a
 				demo for your game and put it on Game Jolt. When we first got a demo for Heartbound up on Steam we saw
@@ -912,7 +924,7 @@
 				<br>
 				<div id="nav-launch-itch"></div>
 				<br>
-				<img src="/assets/images/itch_splash.jpg">
+				<img src="/assets/images/itch_splash.webp" alt="Itch.io">
 				<br><br>
 				<a href="https://piratesoftware.itch.io/heartbound">Itch.io</a> has more customizability than any other
 				site but unfortunately lacks in the discoverability department. You will definitely be leading most
@@ -930,14 +942,13 @@
 	<script type="text/javascript">
 		new Twitch.Player("twitch-embed", {
 			channel: "piratesoftware",
-			parent: ["localhost"]
+			parent: ["localhost", "192.168.1.242"]
 		});
 	</script>
 	<script>
 		const as = document.getElementById("nav").getElementsByTagName("a")
-		for(i =0;i<as.length;i++)
-		{
-			as[i].addEventListener("click", ()=>{
+		for (i = 0; i < as.length; i++) {
+			as[i].addEventListener("click", () => {
 				document.getElementById("nav-section").classList.toggle("active");
 			})
 		}
