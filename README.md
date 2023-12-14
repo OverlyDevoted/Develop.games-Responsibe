@@ -11,7 +11,7 @@ First, I downloaded all the HTML and CSS code, then and all the pictures. I star
 After getting an idea of website's responsiveness from user standpoint, I proceeded to examine the website's code. I noticed that it contains very minimal JS, most of JS in use was from Twitch embed and some CloudFare scripts. I found that `<br>` was the main element for spacing elements. Also there was the of use non-existent tag `grid`. 
 
 ## Google PageSpeed Insights
-
+I ran all tests on local environment
 PageSpeed identified these main issues:
 ### Performance
 1. Images are too large (8.82s)
@@ -22,7 +22,7 @@ PageSpeed identified these main issues:
 1. Image `alt` and HTML `lang` tags 
 
 ### Best practices
-1. Issues from this category stemmed all from twitch stream so I ignored it
+1. Issues from this category stemmed all from twitch stream scripts so I ignored it
 
 ### SEO
 1. And some missing meta headers.
@@ -39,8 +39,8 @@ With this information I set out to make the website more responsive while fixing
 
 ## Results
 - Navbar is now expandable as a sidebar on certain screen sizes.
-- Hyperlinks now open a new tab instead of opening a new page on the same tab. 
-- Utilize syntatic HTML for improved accessibility 
+- External hyperlinks now open a new tab instead of opening a new page on the same tab. 
+- Utilize syntactic HTML for improved accessibility 
 - Labeled all images
 - Reduced image size by about 46.6%. (Funny that scam_splash size got reduced by 94%) 
 
@@ -48,3 +48,17 @@ With this information I set out to make the website more responsive while fixing
 ![Desktop Final](/assets/readme/developGames.gif)
 ### Mobile
 ![Mobile Final](/assets/readme/mobile.gif)
+
+## PageSpeed comparison
+
+### Desktop
+#### Before
+![Before Desktop PageSpeed](/assets/readme/initialDesk.PNG)
+#### After
+![After Desktop PageSpeed](/assets/readme/resDesk.PNG)
+
+### Mobile
+#### Before
+![Before Mobile PageSpeed](/assets/readme/initialMobile.PNG)
+#### After
+![After Mobile PageSpeed](/assets/readme/results.PNG)
