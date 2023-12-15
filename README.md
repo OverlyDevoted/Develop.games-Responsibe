@@ -1,7 +1,7 @@
 # Develope.games | Responsiveness Update
 One innocent day, when I was watching Pirate Software livestream, the stream-master Thor, talked about a compendium for aspiring game devs. So I decided to check the website on my phone for myself as I'm somewhat of an avid game dev... And oh my god, the things I saw... UNRESPONSIVE DESIGN! 
 
-As an apprentice in front-end magic I decided to dibble and dabble and try to make the website more mobile usable for mobile goblins. I tried to not compromise on the simplicity of the website and the minimal use of javascript and more modern CSS features. With this I hope I can show stream-master Thor that there's another way, a more responsive way...  
+As an apprentice in front-end magic I decided to dibble and dabble and try to make the website more mobile usable for mobile goblins. I tried to not compromise on the simplicity of the website and the minimal use of javascript and utilize more modern CSS features. With this I hope I can show stream-master Thor that there's another way, a more responsive way...  
 
 ## Initial analysis
 ### User experience from user standpoint
