@@ -11,6 +11,8 @@ At last I checked how it would be like to use the website as a person with acces
 1. Screen reader read all the `<br>` as 'blank'
 2. Site navigation sidebar was not read very nicely
 3. Skipping header levels
+
+#### Initial mobile view
 ![Initial mobile view](/assets/readme/initial_mobile.jpg)
 
 ## HTML and CSS
