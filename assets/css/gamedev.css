@@ -17,6 +17,16 @@ body {
 h1,h2,h3,h4 {
   color: white;
 }
+html h1, html h2, html h3, html h4, html p{
+  margin:3rem 0;
+}
+#version_label {
+  font-family: 'calibri', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  margin: 2em 0;
+}
 a {
   color: orange;
 }
@@ -42,8 +52,9 @@ a:hover {
   text-align: justify;
   font-family: 'calibri', sans-serif;
   font-size: 22px;
-  width: 40%;
+  width: 80%;
   min-width: 365px;
+  max-width: 769px;
   border-style: solid;
   border-color: #808080;
   border-width: 5px;
@@ -51,6 +62,7 @@ a:hover {
   padding: 20px;
   box-sizing: border-box;
 }
+
 .textbox.stream {
   padding: 20px 20px 50px;
   max-width: 1200px;
@@ -74,9 +86,19 @@ a:hover {
 }
 .textbox img {
   display: block;
-  margin: 0 auto;
+  margin: 3em auto;
   width: 60%;
 }
+.textbox img:first-child {
+  margin-top: 0;
+}
+.paragraph_br > span {
+  display: block;
+}
+.textbox p:last-child {
+  margin-bottom: 0;
+}
+
 .textbox h1,.textbox h2,.textbox h3,.textbox h4 {
   text-align: center;
 }
@@ -92,7 +114,7 @@ a:hover {
   margin: auto;
 }
 .title {
-  margin: 50px auto;
+  margin: 2em auto;
 }
 .title .container {
   display: flex;
@@ -100,10 +122,14 @@ a:hover {
   flex-direction: column;
   gap: 40px;
 }
+figure {
+  margin: 0;
+
+}
 #nav {
   overflow-y: auto;
   background-color: black;
-  padding-right: 2em;
+  padding: 1em;
   margin-left: 0;
 }
 #nav-container {
@@ -120,6 +146,7 @@ a:hover {
   display: flex;
   grid-column: 1 / -1;
   grid-row: 1;
+  flex-direction: row-reverse;
 }
 #nav-container a {
   transition: color 50ms ease-in-out;
@@ -132,13 +159,14 @@ a:hover {
 #nav-container a:focus {
   color: #666;
 }
-ul,
-li {
+li,
+figcaption a {
   list-style: none;
-  margin: 0;
-  padding: 0;
   color: #888;
-  margin-left:2em;
+}
+ul {
+  margin-top:0;
+  margin-bottom:0;
 }
 section {
   display: grid;
@@ -153,6 +181,7 @@ section {
   gap: 40px;
 }
 button {
+  position: relative;
   background-color: white;
   border: none;
   border-top-right-radius: .2em;
@@ -179,7 +208,10 @@ button:hover {
   transition: 300ms;
 }
 
-@media screen and (min-width:850px) {
+@media screen and (min-width:1300px) {
+  .textbox {
+    width: 60%;
+  }
   .title .container {
     flex-direction: row;
   }

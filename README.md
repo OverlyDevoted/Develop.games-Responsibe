@@ -1,18 +1,24 @@
 # Develope.games. Responsiveness Update
-One innocent day, when I was watching Pirate Software livestream, the stream-master Thor, talked about a compendium for aspiring game devs. So I decided to check the website on my phone for myself as I'm somewhat of an avid game dev... And oh my god, the things I saw... UNRESPONSIVE DESIGN! As an apprentice in front-end magic I decided to dibble and dabble and try to make the website more mobile usable for mobile goblins. I tried to not compromise on the simplicity of the website and the minimal use of javascript and more modern CSS features. With this I hope I can show stream-master Thor that there's another way, a more responsive way...  
+One innocent day, when I was watching Pirate Software livestream, the stream-master Thor, talked about a compendium for aspiring game devs. So I decided to check the website on my phone for myself as I'm somewhat of an avid game dev... And oh my god, the things I saw... UNRESPONSIVE DESIGN! 
+
+As an apprentice in front-end magic I decided to dibble and dabble and try to make the website more mobile usable for mobile goblins. I tried to not compromise on the simplicity of the website and the minimal use of javascript and more modern CSS features. With this I hope I can show stream-master Thor that there's another way, a more responsive way...  
 
 ## Initial analysis
 ### User experience from user standpoint
 First, I downloaded all the HTML and CSS code, then and all the pictures. I started of with playing around with the webpage size to see how it reacts to different sizes. The element sizes were constant pixel size, so no element scales with the screen size so when you make your screen smaller, the element stay the same size and you have to scroll to navigate the website. After that I checked out the website on my phone and the website was all zoomed out to fit the whole width, which was not readable without zooming and I had to do a lot of manual horizontal scrolling to navigate through the site. 
 
+At last I checked how it would be like to use the website as a person with accessibility needs. I tried to navigate the website with a keyboard and I did not experience any issues navigating the site. Then I started to browse the site with a screen reader and I encountered some issues. 
+1. Screen reader read all the `<br>` as 'blank'
+2. Site navigation sidebar was not read very nicely
+3. Skipping header levels
 ![Initial mobile view](/assets/readme/initial_mobile.jpg)
 
 ## HTML and CSS
 After getting an idea of website's responsiveness from user standpoint, I proceeded to examine the website's code. I noticed that it contains very minimal JS, most of JS in use was from Twitch embed and some CloudFare scripts. I found that `<br>` was the main element for spacing elements. Also there was the of use non-existent tag `grid`. 
 
 ## Google PageSpeed Insights
-I ran all tests on local environment
-PageSpeed identified these main issues:
+I ran all tests on local environment. PageSpeed identified these main issues:
+
 ### Performance
 1. Images are too large (8.82s)
 2. Some images are too large in size (8.05s)
@@ -36,29 +42,36 @@ With this information I set out to make the website more responsive while fixing
 4. Make hyperlinks open on a new tab
 5. Use as little JS as possible
 6. Refactor CSS and HTML to reduce size and increase readability
+7. Improve ScreenReader experience
 
 ## Results
 - Navbar is now expandable as a sidebar on certain screen sizes.
 - External hyperlinks now open a new tab instead of opening a new page on the same tab. 
 - Utilize syntactic HTML for improved accessibility 
-- Labeled all images
+- Labeled all images and links for accessibility
 - Reduced image size by about 46.6%. (Funny that scam_splash size got reduced by 94%) 
+- Improved ScreenReader experience by reorganizing navigation lists, headers, added labels
 
 ### Desktop
 ![Desktop Final](/assets/readme/developGames.gif)
+
 ### Mobile
 ![Mobile Final](/assets/readme/mobile.gif)
 
 ## PageSpeed comparison
 
 ### Desktop
+
 #### Before
 ![Before Desktop PageSpeed](/assets/readme/initialDesk.PNG)
+
 #### After
 ![After Desktop PageSpeed](/assets/readme/resDesk.PNG)
 
 ### Mobile
+
 #### Before
 ![Before Mobile PageSpeed](/assets/readme/initialMobile.PNG)
+
 #### After
 ![After Mobile PageSpeed](/assets/readme/results.PNG)
